@@ -1,5 +1,4 @@
-// Rename [id]/page.tsx to [slug]/page.tsx if you're using slug as the route parameter
-// OR ensure you refer to `id` consistently in the code.
+
 
 type Post = { id: number; title: string; body: string };
 
@@ -16,10 +15,10 @@ async function getPost(slug: string): Promise<Post > {
 export default async function PostPage({
   params,
 }: {
-  params: { slug: string }; // Make sure you're accessing `id` here
+  params: { slug: string }; 
 }) {
    const { slug } = await params
-  const post : Post = await getPost(slug); // Make sure you're using `slug` in the function
+  const post : Post = await getPost(slug); 
 
 
   return (

@@ -63,6 +63,28 @@
 
 ---
 
+## Rendering Methods in Next.js
+
+### SSR (Server-Side Rendering)
+- **What is it?** Generates HTML on each request, ensuring fresh content.
+- **When to use?** Dynamic content, personalized pages, SEO optimization.
+- **Pros:** Fresh content, good for dynamic pages, SEO-friendly.
+- **Cons:** Slower performance, higher server costs, no caching.
+
+### SSG (Static Site Generation)
+- **What is it?** Generates HTML at build time, serving static files.
+- **When to use?** Content-driven sites, SEO, fast performance.
+- **Pros:** Fast performance, low server load, great for SEO.
+- **Cons:** Limited dynamic content, build time, no personalization.
+
+### ISR (Incremental Static Regeneration)
+- **What is it?** Updates static pages incrementally after build.
+- **When to use?** Content that updates infrequently, SEO.
+- **Pros:** Fresh content with static performance, efficient caching, scalability.
+- **Cons:** Regeneration delay, complexity, potential stale content.
+
+---
+
 ## Quick Summary Table
 
 | Feature                          | Benefit                                                                  |
@@ -84,9 +106,3 @@
 | DX Enhancements                  | Faster builds + better errors                                            |
 
 ---
-
-## Study Tips
-- Practice migrating an old project with **codemod**.
-- Test new caching defaults by switching on/off.
-- Try React Compiler (experimental).
-- Experiment with `<Form>` and `unstable_after` in small demos.
